@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Manrope:wght@300;400;500;600;700;800&display=swap");
+:root {
+  --lightBlack: #34374c;
+  --darkBlack: #2c2e3e;
+  --red: #ee2b47;
+  --white: #f6f6f6;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: var(--lightBlack);
+  font-family: "Manrope", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+.quote-icon {
+  position: absolute;
+  top: -10%;
+  color: #fffcfd15;
+  left: 0;
+  font-size: 20rem;
+  z-index: -1;
+}
+main.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.blank {
+  width: 90%;
+  padding: 20px;
+  background-color: var(--darkBlack);
+  text-align: center;
+  color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 0px 10px #34374c;
+}
+.blank::after {
+  content: "";
+  display: block;
+  height: 100px;
+  width: 800px;
+  top: 0;
+  left: -40%;
+  z-index: -1;
+  transform: rotate(140deg);
+  background-color: var(--red);
+  position: absolute;
+}
+.blank h1 {
+  margin-bottom: 15px;
+}
+.quote-container {
+  padding: 20px;
+  box-shadow: inset 0 0 5px #2c2e3ed1;
+  background-color: var(--red);
+}
+.quote {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--white);
+  z-index: 1;
+  text-align: center;
+}
+
+.author {
+  font-size: 1.5rem;
+  text-align: right;
+  margin: 10px 0;
+  font-weight: 600;
+  color: var(--white);
+  font-family: "Dancing Script", cursive;
+}
+.btn {
+  padding: 8px 30px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 550;
+  cursor: pointer;
+  color: var(--darkBlack);
+  box-shadow: 0 0 2px #34374c22, 0 2px 4px #34374c22, 0 4px 8px #34374c22,
+    0 8px 16px #34374c22, 0 16px 32px #34374c22, 0 32px 64px #34374c22;
+}
+.btn:hover {
+  filter: brightness(110%);
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 100%;
+  }
+  .blank {
+    width: 500px;
+  }
+  .btn {
+    font-size: 1.3rem;
+    padding: 10px 30px;
+  }
+  .quote-icon {
+    position: absolute;
+    top: 0%;
+    color: #fffcfd15;
+    left: 20%;
+    font-size: 30rem;
+    z-index: -1;
+  }
+  .blank::after {
+    content: "";
+    display: block;
+    height: 250px;
+    width: 2200px;
+    top: 20%;
+    left: -10%;
+    z-index: -1;
+    transform: rotate(150deg);
+    background-color: #ee2b48d2;
+    position: absolute;
+  }
+}
